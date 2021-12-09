@@ -27,13 +27,13 @@ nodemon
 prettier
 
 
-# Integrantes
+# Integrante
 
 Pagliarini, Cesar 
 
 
 # Links GitHub
-Pagliarini, Cesar (https://github.com/CesarPagliarini/MCGA_Parcial1/tree/features-clientes-cabañas)
+Pagliarini, Cesar (https://github.com/CesarPagliarini/mcga-FinalBackend/tree/features-clientes-cabanas-usuarios)
 
 # Link Heroku: 
 
