@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CesarPagliarini/MCGA_Parcial1.git"
+    "url": "https://github.com/CesarPagliarini/mcga-FinalBackend.git"
   },
   "engines": {
     "node": "12.18.3"
@@ -17,9 +17,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CesarPagliarini/MCGA_Parcial1/issues"
+    "url": "https://github.com/CesarPagliarini/mcga-FinalBackend/issues"
   },
-  "homepage": "https://github.com/CesarPagliarini/MCGA_Parcial1#readme",
+  "homepage": "https://github.com/CesarPagliarini/mcga-FinalBackend#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

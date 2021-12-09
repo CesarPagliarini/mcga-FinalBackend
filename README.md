@@ -1,12 +1,6 @@
 # Final MCGA - Backend
 
-Este es el desarrollo del enunciado que brindo la catedra para cumplimentar con el parcial nº1 de la materia MCGA.
-
-## Enunciado de la Problematica 
-
-Se desea construir una API REST para gestionar un camping . Las principales funciones del sistema seran: Gestion de Cabañas , Gestion de Clientes y Gestion de Reservas.
-
-
+Este es el desarrollo del enunciado que brindo la catedra para el cumplimiento del examen final de la asignatura MCGA (Backend).
 
 # Pasos a seguir para la ejecucion
 
