@@ -6,7 +6,7 @@ const getCabañas = async (req, res) => {
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Cabaña encontrado'
+            msg: 'Cabañas encontradas'
         })
     }catch(error){
         return res.status(400).json({
@@ -43,14 +43,14 @@ const getCabañaById = async (req, res) => {
         if(!response || response.length === 0){
             return res.status(404).json({
                 error: true,
-                msg: 'El Cabaña solicitado no existe'
+                msg: 'La Cabaña solicitado no existe'
             })
         }
 
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Cabaña encontrado con éxito'
+            msg: 'Cabaña encontrada con éxito'
         })
     }catch(error){
         return res.status(400).json({
@@ -68,14 +68,14 @@ const deleteCabañaById = async (req, res) => {
         if(!response || response.length === 0){
             return res.status(404).json({
                 error: true,
-                msg: 'No existe el Cabaña'
+                msg: 'No existe la cabaña solicitada'
             })
         }
 
         return res.status(200).json({
             data: response,
             error: false,
-            msg: 'Cabaña eliminado con éxito'
+            msg: 'Cabaña eliminada con éxito'
         })
     }catch(error){
         return res.status(400).json({
@@ -93,14 +93,14 @@ const updateCabañaById = async (req, res) => {
         if (!response) {
             return res.status(400).json({
                 error: true,
-                msg: 'No se pudo actualizar el Cabaña',
+                msg: 'No se pudo actualizar la cabaña',
             });
         }
 
         return res.status(200).json({
             data: response,
             error: false,
-            message: 'Cabaña actualizado con exito'
+            message: 'Cabaña actualizada con exito'
         }) 
     } catch (error) {
         return res.status(400).json({
