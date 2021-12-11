@@ -1,9 +1,7 @@
 const express = require('express'); // Framework web que permite crear APIS
-const app = express();
-app.use(cors());
 const router = require('./routes'); // Importacion de las rutas
-const cors = require('cors'); // Se utiliza para matchear origenes cruzados
 const mongoose = require('mongoose'); // Libreria para el manejo de la base de datos
+const cors = require('cors'); // Se utiliza para matchear origenes cruzados
 require('dotenv').config(); // Se utiliza para manejar las variables globales
 
 // Obtencion de las variables de entorno
@@ -15,6 +13,9 @@ const nombre_db = process.env.NOMBRE_DB;
 // String de conexion a la base de datos
 const conexion_db = `mongodb+srv://${usuario_db}:${password_db}@cluster0.4qowy.mongodb.net/${nombre_db}?retryWrites=true&w=majority`;
 
+const app = express();
+
+app.use(cors());
 app.use(express.json()); // Permite obtener el cuerpo del POST via req.body
 
 app.use('/', router);
