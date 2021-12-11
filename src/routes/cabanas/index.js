@@ -8,4 +8,4 @@ router.get('/:id', ctrlCabañas.getCabañaById);
 router.delete('/:id', ctrlCabañas.deleteCabañaById);
 router.put('/:id', ctrlCabañas.updateCabañaById);
 
-module.exports = router
+module.exports = router;
