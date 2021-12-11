@@ -6,7 +6,7 @@ Este es el desarrollo del enunciado que brindo la catedra para el cumplimiento d
 
 1 - npm install
 2 - npm start
-3 - Probar en el navegador si efectivamente se inicio correctamente (http://localhost:3000)
+3 - Probar en el navegador si efectivamente se inicio correctamente (http://localhost:5000)
 
 # Tenologias utilizadas
 
@@ -31,4 +31,4 @@ Pagliarini, Cesar (https://github.com/CesarPagliarini/mcga-FinalBackend/tree/fea
 
 # Link Heroku: 
 
-https://app-parcialmcga.herokuapp.com
+https://app-finalmcga.herokuapp.com/
