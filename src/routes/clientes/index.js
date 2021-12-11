@@ -8,4 +8,4 @@ router.get('/:id', ctrlClientes.getClienteById);
 router.delete('/:id', ctrlClientes.deleteClienteById);
 router.put('/:id', ctrlClientes.updateClienteById);
 
-module.exports = router
+module.exports = router;
