@@ -2,8 +2,8 @@ const express = require('express'); // Framework web que permite crear APIS
 const app = express();
 app.use(cors());
 const router = require('./routes'); // Importacion de las rutas
-const mongoose = require('mongoose'); // Libreria para el manejo de la base de datos
 const cors = require('cors'); // Se utiliza para matchear origenes cruzados
+const mongoose = require('mongoose'); // Libreria para el manejo de la base de datos
 require('dotenv').config(); // Se utiliza para manejar las variables globales
 
 // Obtencion de las variables de entorno
