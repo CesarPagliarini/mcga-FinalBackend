@@ -1,5 +1,6 @@
 const express = require('express');
 const ctrlClientes = require('../../controllers/cliente');
+
 const router = express.Router();
 
 router.get('/', ctrlClientes.getClientes);

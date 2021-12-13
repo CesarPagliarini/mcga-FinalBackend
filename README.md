@@ -18,7 +18,6 @@ express
 husky
 mongoose
 nodemon
-prettier
 
 
 # Integrante

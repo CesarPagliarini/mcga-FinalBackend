@@ -8,6 +8,4 @@ const router = express.Router();
 router.use('/clientes', clientes);
 router.use('/cabanas', cabanas);
 
-
-
 module.exports = router;

@@ -1,5 +1,6 @@
 const express = require('express');
 const ctrlCabañas = require('../../controllers/cabana');
+
 const router = express.Router();
 
 router.get('/', ctrlCabañas.getCabañas);
