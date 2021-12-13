@@ -13,16 +13,16 @@ const esquemaCliente = new mongoose.Schema({
 		type: String,
 		require: [true, 'el mail es un campo requerido'],
 	},
-	tipo_documento: {
+	tipoDocumento: {
 		type: String,
 		require: true,
 	},
-	numero_documento: {
+	numeroDocumento: {
 		type: Number,
 		require: true,
 		unique: true
 	},
-	fecha_nacimiento: {
+	fechaNacimiento: {
 		type: Date,
 		require: true,
 	},

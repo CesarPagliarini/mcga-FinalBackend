@@ -6,12 +6,12 @@ require('dotenv').config(); // Se utiliza para manejar las variables globales
 
 // Obtencion de las variables de entorno
 const port = process.env.PORT || 4000;
-const usuario_db = process.env.USUARIO_DB;
-const password_db = process.env.PASS_DB;
-const nombre_db = process.env.NOMBRE_DB;
+const usuarioDb = process.env.USUARIO_DB;
+const passwordDb = process.env.PASS_DB;
+const nombreDb = process.env.NOMBRE_DB;
 
 // String de conexion a la base de datos
-const conexion_db = `mongodb+srv://${usuario_db}:${password_db}@cluster0.4qowy.mongodb.net/${nombre_db}?retryWrites=true&w=majority`;
+const conexionDb = `mongodb+srv://${usuarioDb}:${passwordDb}@cluster0.4qowy.mongodb.net/${nombreDb}?retryWrites=true&w=majority`;
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.listen(port, () => {
 	console.log(`Server corriendo en puerto: ${port}`);
 });
 
-mongoose.connect(conexion_db).then(() => {
+mongoose.connect(conexionDb).then(() => {
 	console.log('Conexion exitosa con la base de datos');
 }).catch((error) => {
 	console.log(`Error en la conexion, error:  ${error}`);
