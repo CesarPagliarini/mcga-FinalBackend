@@ -5,9 +5,9 @@ const esquemaUsuario = new mongoose.Schema({
     type: String,
     require: [true, 'el nombre es un campo requerido'],
   },
-  mail: {
+  email: {
     type: String,
-    require: [true, 'el mail es un campo requerido'],
+    require: [true, 'el email es un campo requerido'],
   },
   password: {
     type: String,

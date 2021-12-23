@@ -16,6 +16,30 @@ const getUsuarios = async (req, res) => {
   }
 };
 
+const getUsuarioByEmail = async (req, res) => {
+  try {
+    const response = await EsquemaUsuario.findOne({ email: req.params.email });
+
+    if (!response || response.length === 0) {
+      return res.status(404).json({
+        error: true,
+        msg: 'El cliente solicitado no existe',
+      });
+    }
+
+    return res.status(200).json({
+      data: response,
+      error: false,
+      msg: 'Cliente encontrado con éxito',
+    });
+  } catch (error) {
+    return res.status(400).json({
+      error: true,
+      msg: error,
+    });
+  }
+};
+
 const addUsuario = async (req, res) => {
   try {
     const Usuario = new EsquemaUsuario(req.body);
@@ -37,4 +61,5 @@ const addUsuario = async (req, res) => {
 module.exports = {
   getUsuarios,
   addUsuario,
+  getUsuarioByEmail,
 };
