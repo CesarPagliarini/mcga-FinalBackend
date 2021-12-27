@@ -16,30 +16,6 @@ const getUsuarios = async (req, res) => {
   }
 };
 
-const getUsuarioByEmail = async (req, res) => {
-  try {
-    const response = await EsquemaUsuario.findOne({ email: req.params.email });
-
-    if (!response || response.length === 0) {
-      return res.status(404).json({
-        error: true,
-        msg: 'El cliente solicitado no existe',
-      });
-    }
-
-    return res.status(200).json({
-      data: response,
-      error: false,
-      msg: 'Cliente encontrado con éxito',
-    });
-  } catch (error) {
-    return res.status(400).json({
-      error: true,
-      msg: error,
-    });
-  }
-};
-
 const addUsuario = async (req, res) => {
   try {
     const Usuario = new EsquemaUsuario(req.body);
@@ -58,8 +34,30 @@ const addUsuario = async (req, res) => {
   }
 };
 
+// eslint-disable-next-line consistent-return
+const checkUsuario = async (req, res) => {
+  if (!req.body.email || typeof req.body.email !== 'string') {
+    return res.status(400).send({ message: 'Email invalido' });
+  }
+  if (!req.body.password || typeof req.body.password !== 'string') {
+    return res.status(400).send({ message: 'Password invalido' });
+  }
+
+  EsquemaUsuario.findOne({ email: req.body.email, password: req.body.password })
+    .then((usuario) => {
+      if (usuario) {
+        res.status(200).send(usuario);
+      } else {
+        res.status(404).send({ message: 'Email o contraseña incorrecto.' });
+      }
+    })
+    .catch((error) => {
+      res.status(400).send(error);
+    });
+};
+
 module.exports = {
   getUsuarios,
   addUsuario,
-  getUsuarioByEmail,
+  checkUsuario,
 };
